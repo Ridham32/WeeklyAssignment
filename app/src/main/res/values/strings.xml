@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeeklyAssignment</string>
+    <string name="entername">ENTER NAME</string>
+    <string name="name">name</string>
+    <string name="add">ADD</string>
+    <string name="updateitem">UPDATE THE ITEM TO</string>
+    <string name="helloname">Name</string>
+    <string name="update">UPDATE</string>
+</resources>
