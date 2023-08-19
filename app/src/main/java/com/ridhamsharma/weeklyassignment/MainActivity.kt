@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -17,10 +18,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     var lvList = arrayListOf<String>()
     lateinit var adapter: ArrayAdapter<String>
+   // lateinit var spinView: Spinner
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+       // spinView=findViewById(R.id.spinView)
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, lvList)
         binding.lvList.adapter = adapter
         //////// btn plus start here ///////////
@@ -67,6 +70,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Clicked Update", Toast.LENGTH_SHORT).show()
                     /**** alert ends here ****/
 
+
                     /**** custom dialog  ****/
                     var dialog = Dialog(this)
                     dialog.setContentView(R.layout.cutomdialogalert)
@@ -91,8 +95,6 @@ class MainActivity : AppCompatActivity() {
 
                 }
                 /**** Custom Dialog Ends Here ****/
-
-
                 .show()
         }
     }
